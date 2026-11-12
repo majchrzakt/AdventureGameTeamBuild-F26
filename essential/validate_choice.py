@@ -13,14 +13,13 @@
 # ------------------------------------------------------------------------
 
 
-def validate_choice(prompt: str, choices: list[int]) -> int:
+def validate_choice(prompt: str, choices: list[str]) -> int:
     validInput: bool = False
     choice: int
     while True:
         try:
-            userInput = input(prompt)
-            choice: int = int(userInput)
+            choice = input(prompt)
             assert choice in choices
             return choice
-        except (ValueError, AssertionError):
+        except AssertionError:
             print("Invalid input.")
