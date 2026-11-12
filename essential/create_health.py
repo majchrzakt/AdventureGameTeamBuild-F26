@@ -25,5 +25,4 @@ def create_health():
         print(f"{health} HP. That's pretty good. You're good and stocky.")
     else:
         print(f"{health} HP! Holy moly, you're thick!")
-        print()
     return health
