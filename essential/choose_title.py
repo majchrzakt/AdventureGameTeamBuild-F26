@@ -8,7 +8,7 @@
 #  Description: Randomly selects a starting title (like Wanderer or 
 #    Apprentice) and prints it.
 #
-#  Author: Your Name
+#  Author: Aaden Easton
 #
 # ------------------------------------------------------------------------
 
