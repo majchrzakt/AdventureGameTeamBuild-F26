@@ -8,9 +8,11 @@
 #  Description: Displays the player’s current health, gold, and title 
 #    in a format that's easy to read quickly.
 #
-#  Author: Your Name
+#  Author: Aaden Easton
 #
 # ------------------------------------------------------------------------
 
-def status_report(health, gold, title):
-    print("Status Report")
+def status_report(health: int, gold: int, title: str):
+    print(f"Health: {health}")
+    print(f"Gold: {gold}")
+    print(f"Title: {title}")
