@@ -8,7 +8,7 @@
 #  Description: Randomly generates starting gold between 0 and 50. 
 #    Prints a message about starting amount of gold.
 #
-#  Author: Your Name
+#  Author: Josie Chevalier
 #
 # ------------------------------------------------------------------------
 
