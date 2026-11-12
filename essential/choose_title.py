@@ -16,5 +16,15 @@ import random
 
 def choose_title():
     print("Choose Title")
-    return "Knight"
+    titles = [
+        "Knight",
+        "Apprentice",
+        "Mage",
+        "King",
+        "Queen",
+        "Witch",
+        "Necromancer",
+        "Engineer"
+    ]
+    return random.choice(titles)
 
