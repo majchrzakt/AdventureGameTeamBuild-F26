@@ -107,7 +107,12 @@ def main():
         # --- Run random scenario from chosen category ---
         # --- Reputation ---
         if choice == "1":
-            rep_choice = random.randint(1, 6)
+
+            rep_choice = 0
+
+            while rep_choice not in [1]: 
+               rep_choice = random.randint(1, 7)
+
 
             if rep_choice == 1:
                title = knight_promotion(title)
@@ -124,13 +129,22 @@ def main():
             elif rep_choice == 5:
                title = royal_favor(title)
 
-            else:
+            elif rep_choice == 6:
                title = secret_talisman(title)
+
+            else:
+               print("uh oh :(")
 
 
         # --- Encounter ---
         elif choice == "2":
-            encounter_choice = random.randint(1, 10)
+            encounter = [ambush, forest_attack, healing_herbs, hidden_pond, hidden_trap]
+
+            encounter_choice = 0
+            while encounter_choice not in [3, 6, 8, 9, 10]:
+               encounter_choice = random.randint(1, 11)
+
+
 
             if encounter_choice == 1:
                health = rest_inn(health, gold)
@@ -159,13 +173,20 @@ def main():
             elif encounter_choice == 9:
                health = ambush(health)
 
-            else:
+            elif encounter_choice == 10:
                health = healing_herbs(health)
+
+            else:
+               print("uh oh :(")
 
 
         # --- Wealth ---
         elif choice == "3":
-            gold_choice = random.randint(1, 9)
+            wealth = [find_treasure, lottery]
+
+            gold_choice = 0
+            while gold_choice not in [1, 8, 9]:
+               gold_choice = random.randint(1, 10)
 
             if gold_choice == 1:
                gold = find_treasure(gold)
@@ -191,8 +212,12 @@ def main():
             elif gold_choice == 8:
                gold = treasure_map(gold)
 
-            else:
+            elif gold_choice == 9:
                gold = lottery(gold)
+
+            else:
+               print("uh oh :(")
+   
 
 
         # --- Quit ---
