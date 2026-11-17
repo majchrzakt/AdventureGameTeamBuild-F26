@@ -24,5 +24,5 @@ def create_health():
     elif(100 < health < 126):
         print(f"{health} HP. That's pretty good. You're good and stocky.")
     else:
-        print(f"{health} HP! Holy moly, you're thick!")
+        print(f"{health} HP! Holy moly, you're thicker than a bowl of oatmeal!")
     return health
