@@ -50,7 +50,7 @@ def treasure_map(gold):
         print("🔥 As you emerge into the sunlight, you hear a furious roar shake the mountain. Enraged and unable to reach you, the dragon takes flight on the hunt... and scorches the nearest village to ashes!")
         gold += found_gold
     else:
-        print("\n You draw your sword and threaten the dragon!")
+        print("\nYou draw your sword and threaten the dragon!")
         time.sleep(1.5)
         print("Before you can draw your sword, he lashes out with his massive thick jaws and snaps yout head off with one clean bite. He reclaims every last coin from your bleding corspe. Your adventure ends here, but he decides to scorch the nearest town and leave 1 survivor to make sure they don't forget. ")
         gold = 0
@@ -60,5 +60,5 @@ def treasure_map(gold):
     print(f"\nYou now have {gold} gold!")
     return gold
 
-test_gold = treasure_map(50)
-print("Returned gold:", test_gold)
+#test_gold = treasure_map(50)
+#print("Returned gold:", test_gold)
