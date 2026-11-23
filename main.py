@@ -97,128 +97,50 @@ def main():
 
         # --- Get user choice ---
         print()
-        choice = validate_choice("Enter 1, 2, 3, or 4: ", ["1","2","3","4"])
+        choice = validate_choice("Enter 1, 2, 3, or 4: ", ["1", "2", "3", "4"])
 
         # --- Clear screen ---
         os.system('cls' if os.name == 'nt' else 'clear')
-        print ("The adventure continues!\n")
+        print("The adventure continues!\n")
 
-
-        # --- Run random scenario from chosen category ---
         # --- Reputation ---
         if choice == "1":
+            # List the completed reputation functions here (each takes title)
+            completed = [knight_promotion]
+            # completed = [knight_promotion, secret_path, lost_map,
+            #              magical_training, royal_favor, secret_talisman]
 
-            rep_choice = 0
-
-            while rep_choice not in [1]: 
-               rep_choice = random.randint(1, 7)
-
-
-            if rep_choice == 1:
-               title = knight_promotion(title)
-
-            elif rep_choice == 2:
-               title = secret_path(title)
-
-            elif rep_choice == 3:
-               title = lost_map(title)
-
-            elif rep_choice == 4:
-               title = magical_training(title)
-
-            elif rep_choice == 5:
-               title = royal_favor(title)
-
-            elif rep_choice == 6:
-               title = secret_talisman(title)
-
-            else:
-               print("uh oh :(")
-
+            scenario = random.choice(completed)
+            title = scenario(title)
 
         # --- Encounter ---
         elif choice == "2":
-            encounter = [ambush, forest_attack, healing_herbs, hidden_pond, hidden_trap]
+            # List the completed encounters here as (function, arguments)
+            completed = [
+                (forest_attack, (health,)),
+                (hidden_trap, (health,)),
+                (hidden_pond, (health,)),
+                (ambush, (health,)),
+                (healing_herbs, (health,)),
+                # (rest_inn, (health, gold)),
+                # (training_session, (health, title)),
+                # (river_crossing, (health,)),
+                # (mystical_potion, (health,)),
+                # (haunted_forest, (health,)),
+            ]
 
-            encounter_choice = 0
-            while encounter_choice not in [3, 6, 8, 9, 10]:
-               encounter_choice = random.randint(1, 11)
-
-
-
-            if encounter_choice == 1:
-               health = rest_inn(health, gold)
-
-            elif encounter_choice == 2:
-               health = training_session(health, title)
-
-            elif encounter_choice == 3:
-               health = forest_attack(health)
-
-            elif encounter_choice == 4:
-               health = river_crossing(health)
-
-            elif encounter_choice == 5: 
-               health = mystical_potion(health)
-
-            elif encounter_choice == 6:
-               health = hidden_trap(health)
-
-            elif encounter_choice == 7:
-               health = haunted_forest(health)
-
-            elif encounter_choice == 8:
-               health = hidden_pond(health)
-
-            elif encounter_choice == 9:
-               health = ambush(health)
-
-            elif encounter_choice == 10:
-               health = healing_herbs(health)
-
-            else:
-               print("uh oh :(")
-
+            scenario, args = random.choice(completed)
+            health = scenario(*args)
 
         # --- Wealth ---
         elif choice == "3":
-            wealth = [find_treasure, lottery]
+            # List the completed wealth functions here (each takes gold)
+            completed = [find_treasure, treasure_map, lottery]
+            # completed = [find_treasure, bandit_ambush, merchant_sale, find_gem,
+            #              duel_knight, gold_mine, cursed_coin, treasure_map, lottery]
 
-            gold_choice = 0
-            while gold_choice not in [1, 8, 9]:
-               gold_choice = random.randint(1, 10)
-
-            if gold_choice == 1:
-               gold = find_treasure(gold)
-
-            elif gold_choice == 2:
-               gold = bandit_ambush(gold)
-
-            elif gold_choice == 3:
-               gold = merchant_sale(gold)
-
-            elif gold_choice == 4:
-               gold = find_gem(gold)
-
-            elif gold_choice == 5:
-               gold = duel_knight(gold)
-
-            elif gold_choice == 6:
-               gold = gold_mine(gold)
-
-            elif gold_choice == 7:
-               gold = cursed_coin(gold)
-
-            elif gold_choice == 8:
-               gold = treasure_map(gold)
-
-            elif gold_choice == 9:
-               gold = lottery(gold)
-
-            else:
-               print("uh oh :(")
-   
-
+            scenario = random.choice(completed)
+            gold = scenario(gold)
 
         # --- Quit ---
         else:
