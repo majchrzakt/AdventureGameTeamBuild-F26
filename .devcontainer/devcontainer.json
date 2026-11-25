@@ -1,0 +1,16 @@
+{
+  "name": "Python project",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+
+  // Install the project's libraries, if it lists any in requirements.txt
+  "postCreateCommand": "if [ -f requirements.txt ]; then pip install -r requirements.txt; fi",
+
+  // Start the program each time someone opens the codespace
+  "postAttachCommand": "python main.py",
+
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python"]
+    }
+  }
+}
