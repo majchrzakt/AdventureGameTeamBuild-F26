@@ -1,0 +1,36 @@
+# List the libraries your program imports that aren't built into Python,
+# for example: packages = ["numpy", "pandas"]
+packages = []
+
+# Every extra .py file your program imports, one per line.
+[files]
+"./essential/choose_title.py" = "./essential/choose_title.py"
+"./essential/create_gold.py" = "./essential/create_gold.py"
+"./essential/create_health.py" = "./essential/create_health.py"
+"./essential/status_report.py" = "./essential/status_report.py"
+"./essential/validate_choice.py" = "./essential/validate_choice.py"
+"./reputation/knight_promotion.py" = "./reputation/knight_promotion.py"
+"./reputation/lost_map.py" = "./reputation/lost_map.py"
+"./reputation/magical_training.py" = "./reputation/magical_training.py"
+"./reputation/royal_favor.py" = "./reputation/royal_favor.py"
+"./reputation/secret_path.py" = "./reputation/secret_path.py"
+"./reputation/secret_talisman.py" = "./reputation/secret_talisman.py"
+"./encounter/ambush.py" = "./encounter/ambush.py"
+"./encounter/forest_attack.py" = "./encounter/forest_attack.py"
+"./encounter/haunted_forest.py" = "./encounter/haunted_forest.py"
+"./encounter/healing_herbs.py" = "./encounter/healing_herbs.py"
+"./encounter/hidden_pond.py" = "./encounter/hidden_pond.py"
+"./encounter/hidden_trap.py" = "./encounter/hidden_trap.py"
+"./encounter/mystical_potion.py" = "./encounter/mystical_potion.py"
+"./encounter/rest_inn.py" = "./encounter/rest_inn.py"
+"./encounter/river_crossing.py" = "./encounter/river_crossing.py"
+"./encounter/training_session.py" = "./encounter/training_session.py"
+"./wealth/bandit_ambush.py" = "./wealth/bandit_ambush.py"
+"./wealth/cursed_coin.py" = "./wealth/cursed_coin.py"
+"./wealth/duel_knight.py" = "./wealth/duel_knight.py"
+"./wealth/find_gem.py" = "./wealth/find_gem.py"
+"./wealth/find_treasure.py" = "./wealth/find_treasure.py"
+"./wealth/gold_mine.py" = "./wealth/gold_mine.py"
+"./wealth/lottery.py" = "./wealth/lottery.py"
+"./wealth/merchant_sale.py" = "./wealth/merchant_sale.py"
+"./wealth/treasure_map.py" = "./wealth/treasure_map.py"
